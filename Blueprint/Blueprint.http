@@ -1,0 +1,41 @@
+
+
+GET {{host}}/blueprint/Customer
+Accept: application/json
+
+###
+POST {{host}}/blueprint/Customer
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "John Doe",
+  "email": "luis@g.com",
+  "phone_number": "123-456-7890",
+  "address":"123 Main St Anytown, USA"
+}
+
+###
+GET {{host}}/blueprint/Customer/1
+Accept: application/json
+###
+
+PUT {{host}}/blueprint/Customer/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "John Doe",
+  "email": "luis@g.com",
+  "phone_number": "123-456-7891",
+  "address":"123 Main St Anytown, USA"
+}
+###
+DELETE {{host}}/blueprint/Customer/1
+Accept: application/json
+
+###
+
+GET {{host}}/blueprint/Product/1
+Accept: application/json
+###

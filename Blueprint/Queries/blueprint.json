@@ -1,0 +1,6 @@
+{
+  "blueprint.getCustomerByEmail": "select id, name, address, email, phone, is_active from customer where email = @email",
+  "blueprint.getCustomersByName": "select id, name, address, email, phone, is_active from customer where name = @name",
+  "blueprint.getCustomerByNameAndPhone": "select id, name, address, email, phone, is_active from customer where name = @name and phone = @phone",
+  "blueprint.getCustomers": "select id,name,address, email, phone, is_active from customer"
+}

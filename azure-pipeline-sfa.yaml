@@ -1,0 +1,36 @@
+﻿trigger:
+  branches:
+    include:
+      - main
+pool:
+  name: ubuntu
+
+steps:
+
+  - task: SonarQubePrepare@5
+    inputs:
+      SonarQube: 'sonar nawa'
+      scannerMode: 'MSBuild'
+      projectKey: 'OneLoan_Blueprint_AY-FQqldpbmG9Z9ry9m1'
+      projectName: 'Blueprint'
+  - task: DotNetCoreCLI@2
+    displayName: 'Build'
+    inputs:
+      command: 'build'
+      projects: '**/*.csproj'
+  - task: SonarQubeAnalyze@5
+    inputs:
+      jdkversion: 'JAVA_HOME'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'test'
+    inputs:
+      command: 'test'
+      projects: '**/*Test.csproj'
+      arguments: '--filter "FullyQualifiedName!~IntegrationTest" --collect "XPlat Code Coverage"'
+  - task: PublishCodeCoverageResults@2
+    displayName: 'Publish coverage test'
+    inputs:
+      summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml'
+
+

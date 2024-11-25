@@ -1,0 +1,30 @@
+﻿{
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 8,
+        "maxLength": 200
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "minLength": 10,
+        "maxLength": 200
+      },
+      "phone": {
+        "type": "string",
+        "minLength": 10,
+        "maxLength": 16,
+        "pattern": "^[0-9]*$"
+      },
+      "address": {
+        "type": "string",
+        "minLength": 10,
+        "maxLength": 500
+      }
+    }
+}

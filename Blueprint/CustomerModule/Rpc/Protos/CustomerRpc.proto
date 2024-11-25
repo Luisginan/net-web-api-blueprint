@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Blueprint.CustomerModule.Rpc";
+
+package Customer;
+
+// The greeting service definition.
+service CustomerService {
+  // Sends a greeting
+  rpc GetCustomer (CustomerRequest) returns (CustomerResponse);
+}
+
+// The request message containing the user's name.
+message CustomerRequest {
+  sint32 id = 1;
+}
+
+// The response message containing the greetings.
+message CustomerResponse{
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+  bool isNull = 4;
+}

@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "f1d32abe-30d3-4ccd-8667-64c787e59206",
+		"name": "Blueprint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5087/api/customer/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5087/api/customer/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5087",
+					"path": [
+						"api",
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5087/api/customer/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"xxx\",\r\n  \"address\": \"Pangandaran\",\r\n  \"email\": \"luis@h7889.com\",\r\n  \"phone_number\": \"09834789384484\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5087/api/customer/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5087",
+					"path": [
+						"api",
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5087/api/customer/15",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5087/api/customer/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5087",
+					"path": [
+						"api",
+						"customer",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5087/api/customer/15",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5087/api/customer/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5087",
+					"path": [
+						"api",
+						"customer",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5087/api/customer/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Papa\",\r\n    \"address\": \"Pangandaran\",\r\n    \"email\": \"luis@h.com\",\r\n    \"phone\": \"09834789384484\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5087/api/customer/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5087",
+					"path": [
+						"api",
+						"customer",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5087/api/product/2000000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5087/api/product/2000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5087",
+					"path": [
+						"api",
+						"product",
+						"2000000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

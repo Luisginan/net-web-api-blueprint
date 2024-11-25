@@ -1,0 +1,16 @@
+﻿<RunSettings>
+	<DataCollectors>
+		<DataCollector FriendlyName="Code Coverage" Uri="datacollector://Microsoft.VisualStudio.Coverage.CodeCoverageDataCollector">
+			<Configuration>
+				<ExcludeFromCodeCoverage>
+					<ModulePaths>
+						<Exclude>
+							<ModulePath>*.Blueprint.dll</ModulePath>
+							<ModulePath>*.Moq.dll</ModulePath>
+						</Exclude>
+					</ModulePaths>
+				</ExcludeFromCodeCoverage>
+			</Configuration>
+		</DataCollector>
+	</DataCollectors>
+</RunSettings>
